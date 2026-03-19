@@ -35,12 +35,12 @@
   <p class="sub">Pour les brocanteurs malins</p>
 
   <div class="camera-btns">
-    <a class="cam-btn" href="googlelens://capture" onclick="openLens(event)">
+    <a class="cam-btn" href="https://lens.google.com" target="_blank">
       <span class="cam-icon">🔍</span>
       <span>Google Lens</span>
       <span style="font-size:11px;color:#aaa;font-weight:400;">Identifier l'objet</span>
     </a>
-    <a class="cam-btn" href="intent://capture/#Intent;scheme=googlelens;end" onclick="openGoogleImages(event)">
+    <a class="cam-btn" href="https://images.google.com" target="_blank">
       <span class="cam-icon">📷</span>
       <span>Google Images</span>
       <span style="font-size:11px;color:#aaa;font-weight:400;">Recherche par photo</span>
@@ -80,17 +80,6 @@
 </div>
 
 <script>
-function openLens(e) {
-  e.preventDefault();
-  window.location.href = 'googlelens://capture';
-  setTimeout(function() {
-    window.open('https://lens.google.com', '_blank');
-  }, 1000);
-}
-function openGoogleImages(e) {
-  e.preventDefault();
-  window.open('https://images.google.com', '_blank');
-}
 function go(site) {
   var q = document.getElementById('q').value.trim();
   if (!q) { alert("Entre un nom d'objet d'abord !"); return; }
